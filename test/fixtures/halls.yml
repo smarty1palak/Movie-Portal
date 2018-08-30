@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  A/C: 
+  Screen: 
+  GOLD_c: 
+  SILVER_c: 
+  BRONZE_c: 
+
+two:
+  name: MyString
+  A/C: 
+  Screen: 
+  GOLD_c: 
+  SILVER_c: 
+  BRONZE_c: 

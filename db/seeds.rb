@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+99.times do |n|
+  name  = Faker::Name.name
+  language = Faker::Name.name
+  genre = Faker::Name.name
+  Movie.create!(name:  name,
+               language: language,
+               genre:              genre)
+end

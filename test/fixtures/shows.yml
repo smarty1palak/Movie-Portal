@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  3D: 
+  start_time: 2018-08-26 11:52:28
+  end_time: 2018-08-26 11:52:28
+  GOLD_p: 1.5
+  SILVER_p: 1.5
+  BRONZE_p: 1.5
+
+two:
+  3D: 
+  start_time: 2018-08-26 11:52:28
+  end_time: 2018-08-26 11:52:28
+  GOLD_p: 1.5
+  SILVER_p: 1.5
+  BRONZE_p: 1.5
