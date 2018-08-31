@@ -1,6 +1,7 @@
 class CreateShows < ActiveRecord::Migration[5.1]
   def change
     create_table :shows do |t|
+      t.references :movie, foreign_key: true
       t.boolean :three_d
       t.time :start_time
       t.time :end_time

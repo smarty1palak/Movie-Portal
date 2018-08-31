@@ -1,8 +1,7 @@
-<h1> All the movies will be showed here. </h1>
-<!-- <%#= will_paginate %> -->
-<ul class="movies">
-    <%= render @movie %>
-</ul>
-<!-- <%#= will_paginate %> -->
+<h1> <%= @movie.name %></h1>
+<div><p> GENRE: <%= @movie.genre %> </p>
+<p>LANGUAGE: <%= @movie.language %>
+</p></div>
 
-<%= link_to "Book Movie", 'book', class: "btn btn-lg btn-primary" %>
+
+<%= link_to "Book Movie", shows_path, class: "btn btn-lg btn-primary"  %>

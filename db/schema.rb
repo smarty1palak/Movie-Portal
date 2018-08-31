@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180827103134) do
+ActiveRecord::Schema.define(version: 20180831071628) do
 
   create_table "customers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
@@ -24,11 +24,15 @@ ActiveRecord::Schema.define(version: 20180827103134) do
     t.string "language"
     t.string "genre"
     t.datetime "time"
+    t.float "rating", limit: 24
+    t.time "length"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_movies_on_name", unique: true
   end
 
   create_table "shows", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "movie_id"
     t.boolean "three_d"
     t.time "start_time"
     t.time "end_time"
@@ -37,6 +41,7 @@ ActiveRecord::Schema.define(version: 20180827103134) do
     t.float "BRONZE_p", limit: 24
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["movie_id"], name: "index_shows_on_movie_id"
   end
 
   create_table "theatres", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -51,6 +56,9 @@ ActiveRecord::Schema.define(version: 20180827103134) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "admin", default: false
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "shows", "movies"
 end

@@ -1,0 +1,9 @@
+<h1>All shows available</h1>
+
+<ul class="shows">
+  <% @movie.shows.each do |show| %>
+    <li>
+      <%= link_to show.GOLD_p, show %>
+    </li>
+  <% end %>
+</ul>
