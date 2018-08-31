@@ -3,5 +3,11 @@
 <p>LANGUAGE: <%= @movie.language %>
 </p></div>
 
-
-<%= link_to "Book Movie", shows_path, class: "btn btn-lg btn-primary"  %>
+<div class="col-md-8">
+    <% if @movie.shows.any? %>
+      <h3>Shows available (<%= @movie.shows.count %>)</h3>
+      <ol class="shows">
+        <%= render @shows %>
+      </ol>
+    <% end %>
+  </div>
