@@ -9,7 +9,7 @@ class MoviesController < ApplicationController
 
   def show
     @movie = Movie.find(params[:id])
-    @show  = @movie.shows
+    @shows  = @movie.shows.all
   end
 
   def book
