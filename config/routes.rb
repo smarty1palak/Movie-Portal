@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   # get 'movies'
    root 'static_pages#home'
   # get    '/movie',   to: 'movies#show'
+  post   '/bookshow',   to: 'shows#create'
   get    '/book',   to: 'movies#book'
   get    '/shows',   to: 'shows#index'
   get    '/movielist',   to: 'movies#index'
